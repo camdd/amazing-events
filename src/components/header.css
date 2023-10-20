@@ -1,0 +1,14 @@
+main {
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size:4.5rem;
+    color: #ffffff;
+    background-color: #F266AB;
+}
+

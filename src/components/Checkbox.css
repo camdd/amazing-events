@@ -1,0 +1,15 @@
+.barraCheck {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.checkbox {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: baseline;
+    text-transform: uppercase;
+}
