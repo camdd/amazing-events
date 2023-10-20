@@ -1,0 +1,20 @@
+footer {
+    background-color: #2CD3E1;
+    padding: 2rem;
+    color:#FFFFFF;
+    text-decoration: none !important;    
+}
+
+.navbar__items {
+    background-color: #2CD3E1;
+    display: flex;
+    justify-content:start;
+    gap: 1rem;
+    align-items:center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500
+}
+
+.navbar__item, .social {
+    background-color: #2CD3E1 !important;
+}
