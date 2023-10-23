@@ -1,10 +1,10 @@
 import './Main.css'
-import Card from './Card'
+import CardComponent from './Card.jsx'
 
 const Main = () => {
     return (
         <>
-        <Card /> 
+        <CardComponent /> 
         </>
     )
 }
