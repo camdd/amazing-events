@@ -1,10 +1,11 @@
 import { Card, Strong, Inset, Text } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
+import './Card.css'
 
 
 const CardComponent =() => {
   return (
-  <div>
+  <div className='container'>
     <Card size="2" style={{ maxWidth: 240 }}>
       <Inset clip="padding-box" side="top" pb="current">
         <img

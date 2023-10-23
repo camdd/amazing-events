@@ -10,11 +10,9 @@ const Home = () => {
     console.log("Home se está renderizando")
     return (
         <div>
-{/*             <CardComponent/> */}
 
         <Layout>
             <Main/>
-                <h3>Acá debería ir el contenido de las cartas // el mismo no se muestra así que averiguar por qué</h3>
         </Layout>
         </div>
     )
