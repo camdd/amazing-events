@@ -1,7 +1,12 @@
 import './App.css'
 import '@radix-ui/themes/styles.css';
 import 'bootstrap/dist/css/bootstrap.css'
-import Home from './pages/Home.jsx'
+/* import Home from './pages/Home.jsx'
+import Past from './pages/Past.jsx'
+import Upcoming from './pages/Upcoming.jsx'
+import Stats from './pages/Stats.jsx' */
+import Contact from './pages/Contact.jsx';
+
 
 
 
@@ -10,9 +15,11 @@ function App() {
 
   return (
     <>
-
-      <Home />
-
+{/*       <Home />
+      <Upcoming />
+      <Past />
+      <Stats /> */}
+      <Contact/>
     </>
   )
 }
