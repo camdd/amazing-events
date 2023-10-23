@@ -1,4 +1,4 @@
-import './Card.css'
+import '@radix-ui/themes/styles.css';
 
 const Card = () => {
     return (
