@@ -1,10 +1,10 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import './Layout.css'
 
 
 // eslint-disable-next-line no-unused-vars, react/prop-types
 const Layout = ({ children }) => {
-    console.log('Layout se está renderizando')
     return (
     <>
     <div>

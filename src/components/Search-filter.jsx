@@ -1,11 +1,13 @@
 import './Search-filter.css'
 import { TextField } from '@radix-ui/themes'
+import Search from '../assets/search.png'
 
 const SearchFilter = () => {
     return (
         <div className='inputSearch'>
         <TextField.Root>
-            <TextField.Input placeholder="Search" />
+            <img className="calendar_searchbar" src={Search} alt="" />
+            <TextField.Input placeholder="Search events" />
         </TextField.Root>
         </div>
 

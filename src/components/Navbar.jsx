@@ -3,41 +3,39 @@ import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import classNames from 'classnames';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 import './Navbar.css';
-
+import Icon from '../assets/icon-stage.png'
+import Calendar from '../assets/calendar.png'
 
 const Navbar = () => {
     return (
       <NavigationMenu.Root className="NavigationMenuRoot">
-        <img className='imgLogo' src="https://seeklogo.com/images/R/radix-ui-logo-4DFADC9A23-seeklogo.com.png?v=638089684610000000" alt="" />
+        <img className='imgLogo' src={Icon} alt="" />
       <NavigationMenu.List className="NavigationMenuList">
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
-            Learn <CaretDownIcon className="CaretDown" aria-hidden />
+            EVENTS <CaretDownIcon className="CaretDown" aria-hidden />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
             <ul className="List one">
               <li style={{ gridRow: 'span 3' }}>
                 <NavigationMenu.Link asChild>
                   <a className="Callout" href="/">
-                    <svg aria-hidden width="38" height="38" viewBox="0 0 25 25" fill="white">
-                      <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
-                      <path d="M12 0H4V8H12V0Z"></path>
-                      <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"></path>
-                    </svg>
-                    <div className="CalloutHeading">Radix Primitives</div>
-                    <p className="CalloutText">Unstyled, accessible components for React.</p>
+                    <img src={Calendar} className='calendar' />
+                    <div className="CalloutHeading">AMAZING EVENTS</div>
+                    <p className="CalloutText">Explore the top events in your city</p>
                   </a>
                 </NavigationMenu.Link>
               </li>
 
-              <ListItem href="https://stitches.dev/" title="Stitches">
-                CSS-in-JS with best-in-class developer experience.
+              <ListItem href="https://stitches.dev/" title="All events">
+                Check out all the cool events!
               </ListItem>
-              <ListItem href="/colors" title="Colors">
-                Beautiful, thought-out palettes with auto dark mode.
+              <ListItem href="/colors" title="Past events">
+                Get the scoop on what went down in your city
               </ListItem>
-              <ListItem href="https://icons.radix-ui.com/" title="Icons">
-                A crisp set of 15x15 icons, balanced and consistent.
+              <ListItem href="https://icons.radix-ui.com/" title="Upcoming events">
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                Don't miss out on what's coming your way!
               </ListItem>
             </ul>
           </NavigationMenu.Content>
@@ -45,7 +43,7 @@ const Navbar = () => {
 
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
-            Overview <CaretDownIcon className="CaretDown" aria-hidden />
+           STATS <CaretDownIcon className="CaretDown" aria-hidden />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
             <ul className="List two">
@@ -73,7 +71,7 @@ const Navbar = () => {
 
         <NavigationMenu.Item>
           <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
-            Github
+            CONTACT
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 

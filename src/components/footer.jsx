@@ -1,4 +1,4 @@
-import './footer.css'
+import './Footer.css'
 import Facebook from '../assets/facebook.png'
 import Instagram from '../assets/instagram.png'
 import Twitter from '../assets/twitter.png'
@@ -17,7 +17,6 @@ return (
                 <a className="navbar__link" href="https://twitter.com/home"><img src={Twitter} className="social" alt="" /> </a>
             </li>
         </ul>
-
     </footer> 
 )
 }

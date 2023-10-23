@@ -1,5 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import './header.css'
+import './Header.css'
 import Navbar from './Navbar'
 
 const Header = () => {

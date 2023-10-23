@@ -1,11 +1,7 @@
-/* FOOTER */
-
 
 footer {
     background-color: #D4E2D4;
     padding: 2rem;
-    color: #FFFFFF;
-    text-decoration: none !important;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -13,17 +9,14 @@ footer {
 }
 
 .navbar__items {
-    background-color: #D4E2D4;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 1rem;
     align-items: center;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
+    list-style-type: none;
 }
 
-
 .navbar__item, .social {
-    background-color: #D4E2D4 !important;
-    width: 1.5em;
+    background-color: #D4E2D4;
+    width: 2.2em;
 }
