@@ -1,4 +1,4 @@
-import './Search-filter.css'
+import './SearchFilter.css'
 import { TextField } from '@radix-ui/themes'
 import Search from '../assets/search.png'
 

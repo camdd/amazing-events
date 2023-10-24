@@ -1,9 +1,9 @@
 import { Table } from '@radix-ui/themes'
-import './Stats-table.css'
+import './StatsTable.css'
 
 const StatsTable = () => {
   return (
-    <div>
+<div>
 <div className='tableContainer'>
   <div className='tableTitle'>EVENTS STATISTICS</div>
   <Table.Root variant="surface">
@@ -17,9 +17,9 @@ const StatsTable = () => {
 
     <Table.Body>
       <Table.Row>
-        <Table.RowHeaderCell>Danilo Sousa</Table.RowHeaderCell>
-        <Table.Cell>danilo@example.com</Table.Cell>
-        <Table.Cell>Developer</Table.Cell>
+        <Table.RowHeaderCell></Table.RowHeaderCell>
+        <Table.Cell></Table.Cell>
+        <Table.Cell></Table.Cell>
       </Table.Row>
     </Table.Body>
   </Table.Root>
@@ -38,9 +38,9 @@ const StatsTable = () => {
 
     <Table.Body>
       <Table.Row>
-        <Table.RowHeaderCell>Danilo Sousa</Table.RowHeaderCell>
-        <Table.Cell>danilo@example.com</Table.Cell>
-        <Table.Cell>Developer</Table.Cell>
+        <Table.RowHeaderCell></Table.RowHeaderCell>
+        <Table.Cell></Table.Cell>
+        <Table.Cell></Table.Cell>
       </Table.Row>
     </Table.Body>
   </Table.Root>
@@ -59,9 +59,9 @@ const StatsTable = () => {
 
     <Table.Body>
       <Table.Row>
-        <Table.RowHeaderCell>Danilo Sousa</Table.RowHeaderCell>
-        <Table.Cell>danilo@example.com</Table.Cell>
-        <Table.Cell>Developer</Table.Cell>
+        <Table.RowHeaderCell></Table.RowHeaderCell>
+        <Table.Cell></Table.Cell>
+        <Table.Cell></Table.Cell>
       </Table.Row>
     </Table.Body>
   </Table.Root>
