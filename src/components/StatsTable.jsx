@@ -1,5 +1,5 @@
 import { Table } from '@radix-ui/themes'
-import './Stats-table.css'
+import './StatsTable.css'
 
 const StatsTable = () => {
   return (
