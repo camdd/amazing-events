@@ -1,6 +1,6 @@
 import './Main.css'
 import CardComponent from './Card.jsx'
-import SearchFilter from './Search-filter.jsx'
+import SearchFilter from './SearchFilter.jsx'
 import Checkbox from './Checkbox'
 
 const Main = () => {
