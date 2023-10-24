@@ -1,11 +1,11 @@
 
 import './App.css'
 import '@radix-ui/themes/styles.css';
- import Home from './pages/Home.jsx'
-/* import Past from './pages/Past.jsx'
-import Upcoming from './pages/Upcoming.jsx'
+/*  import Home from './pages/Home.jsx'
+import Past from './pages/Past.jsx'
+import Upcoming from './pages/Upcoming.jsx' */
 import Stats from './pages/Stats.jsx' 
-import Contact from './pages/Contact.jsx'; */
+/* import Contact from './pages/Contact.jsx'; */
 
 
 
@@ -15,11 +15,11 @@ function App() {
 
   return (
     <>
-     <Home />
-{/*       <Upcoming />
-      <Past />
+{/*      <Home />
+      <Upcoming />
+      <Past /> */}
       <Stats /> 
-      <Contact/> */}
+{/*       <Contact/> */}
     </>
   )
 }

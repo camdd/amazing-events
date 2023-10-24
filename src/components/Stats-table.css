@@ -1,0 +1,19 @@
+.tableContainer{
+    margin-top: 2.5%;
+}
+
+.rt-TableRoot {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.tableTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+
+}
