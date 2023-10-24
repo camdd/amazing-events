@@ -6,16 +6,11 @@ import './Layout.css'
 // eslint-disable-next-line no-unused-vars, react/prop-types
 const Layout = ({ children }) => {
     return (
-    <>
-    <div>
         <div className='containerLayout'>
             <Header title="Titulo principal" description="description"/>
             {children}
             <Footer />
         </div>
-    </div>
-
-    </>
     )
 }
 
