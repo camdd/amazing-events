@@ -1,11 +1,14 @@
 import './Checkbox.css'
 // Checkbox.jsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
+// eslint-disable-next-line react/prop-types
 const Checkbox = ({ events, allEvents, container, dibujarEventos }) => {
+  // eslint-disable-next-line no-unused-vars
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
     const handleCheckboxChange = () => {
       const selectedCategories = Array.from(document.querySelectorAll(".category-filter"))
         .filter((checkbox) => checkbox.checked)
@@ -14,6 +17,7 @@ const Checkbox = ({ events, allEvents, container, dibujarEventos }) => {
       if (selectedCategories.length === 0) {
         dibujarEventos(allEvents, container);
       } else {
+        // eslint-disable-next-line react/prop-types
         const eventsFilter = events.filter((event) => selectedCategories.includes(event.category));
         dibujarEventos(eventsFilter, container);
       }

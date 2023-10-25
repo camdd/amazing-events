@@ -2,7 +2,6 @@ import { Card, Inset, Text } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import './Card.css'
 
-
 // eslint-disable-next-line react/prop-types
 const CardComponent = ({evento}) => {
   return (
