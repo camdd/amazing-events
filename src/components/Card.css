@@ -6,9 +6,9 @@
 .container {
     background-color: #FAF3F0;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
     flex-wrap: wrap;
     margin: 0 auto;
     /* width: 40% */
