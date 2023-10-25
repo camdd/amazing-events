@@ -3,3 +3,10 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.event_cards {
+    display: flex;
+    gap:1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
