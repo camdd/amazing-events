@@ -26,14 +26,10 @@ function App() {
           <Route path="/stats" Component={Stats}/>
           <Route path="/contact" Component={Contact}/>
           <Route path="/details/:id" Component={Details}/>
-          <Route path="*" element={<h1>404: not found</h1>}/>
+          <Route path="*" element={<div className='error'>404: not found</div>}/>
         </Routes>
       </Router>
-{/*      <Home />
-      <Upcoming />
-      <Past />
-      <Stats /> 
-      <Contact/> */}
+
     </>
   )
 }

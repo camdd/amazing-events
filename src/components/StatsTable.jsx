@@ -29,6 +29,12 @@ const StatsTable = () => {
     return ((a / b) * 100).toFixed(2) + '%';
   }
 
+
+/*Qué hace la función updateScoreBoardTable:
+recibe como argumento los datos de eventos, los ordena por el porcentaje de asistencia, y con el método sort lo hace de mayor a menor.
+Encuentra el evento con el mayor porcentaje de asistencia (el primer elemento después de ordenar), el evento con el menor porcentaje de asistencia (el último elemento después de ordenar) y el evento con la mayor capacidad (puedes utilizar reduce para encontrarlo).
+actualiza el estado del componente con estos eventos, por ejemplo, almacenándolos en un estado "data"
+ */
   function updateScoreBoardTable(eventsData) {
     const eventsSortedByConcurrency = eventsData.sort((a, b) => ((b.assistance / b.capacity) * 100) - ((a.assistance / a.capacity) * 100));
 
@@ -47,6 +53,9 @@ const StatsTable = () => {
     });
   }
 
+
+  /* Qué hace updateTable: recibe los datos de eventos y el selector de la tabla. obtiene una referencia a la tabla con el selector querySelector. inicializa un indice de fila para agregar filas a la tabla. mapea los datos de eventos y para cada uno crea una nueva fila con insertRow. luego agrega celdas en la fila con insertCell en donde muestra la categoría, los ingresos y el % de as */
+  // eslint-disable-next-line no-unused-vars
   function updateTable(eventsData, tableSelector) {
     const table = document.querySelector(tableSelector);
     let rowIndex = 1;
@@ -61,6 +70,11 @@ const StatsTable = () => {
     });
   }
 
+
+  /* Qué hace la función processData: - divido los eventos en pasado (tuvieron asistencia) y futuros(no tuvieron asistencia).
+  creo objetos vacíos en donde irán los eventos. 
+  con el bucle foreach recorro los eventos y voy llenando los objetos con los datos, para esto compruebo si la categoría ya existe en el objeto o si es necesario crear un nuevo objeto para esa categoría
+  luego llamo a las funciones updateTable y updateScoreBoardTable con los datos adecuados para que actualicen las tablas con los resultados procesados */
   function processData(data) {
     const pastEventsCategoryStats = {};
     const futureEventsCategoryStats = {};
@@ -107,14 +121,7 @@ const StatsTable = () => {
         setPastEventsData(Object.values(pastEventsCategoryStats));
       }
 
-/*     // Actualiza las tablas con los resultados
-    updateTable(pastEventsCategoryStats, 'table#old_events');
-    updateTable(futureEventsCategoryStats, 'table#new_events');
-    updateScoreBoardTable(pastEvents);
-  } */
 
-
-  
   return (
     <div>
       <div className="tableContainer">

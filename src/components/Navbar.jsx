@@ -27,13 +27,13 @@ const Navbar = () => {
                 </NavigationMenu.Link>
               </li>
 
-              <ListItem href="https://stitches.dev/" title="All events">
+              <ListItem href={"/"} title="All events">
                 Check out all the cool events!
               </ListItem>
-              <ListItem href="/colors" title="Past events">
+              <ListItem href={"/past"} title="Past events">
                 Get the scoop on what went down in your city
               </ListItem>
-              <ListItem href="https://icons.radix-ui.com/" title="Upcoming events">
+              <ListItem href={"/upcoming"} title="Upcoming events">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 Don't miss out on what's coming your way!
               </ListItem>
@@ -43,13 +43,13 @@ const Navbar = () => {
 
         
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
+          <NavigationMenu.Link className="NavigationMenuLink" href={"/stats"}>
             STATS
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
+          <NavigationMenu.Link className="NavigationMenuLink" href={"/contact"}>
             CONTACT
           </NavigationMenu.Link>
         </NavigationMenu.Item>
