@@ -5,6 +5,7 @@ import { CaretDownIcon } from '@radix-ui/react-icons';
 import './Navbar.css';
 import Icon from '../assets/icon-stage.png'
 import Calendar from '../assets/calendar.png'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -19,37 +20,47 @@ const Navbar = () => {
             <ul className="List one">
               <li style={{ gridRow: 'span 3' }}>
                 <NavigationMenu.Link asChild>
-                  <a className="Callout" href="/">
+                  <Link className="Callout" to="/">
                     <img src={Calendar} className='calendar' />
                     <div className="CalloutHeading">AMAZING EVENTS</div>
                     <p className="CalloutText">Explore the top events in your city</p>
-                  </a>
+                  </Link>
                 </NavigationMenu.Link>
               </li>
 
-              <ListItem href="https://stitches.dev/" title="All events">
+              <Link to="/">
+              <ListItem title="All events">
                 Check out all the cool events!
               </ListItem>
-              <ListItem href="/colors" title="Past events">
+              </Link>
+
+              <Link to="/past">
+              <ListItem title="Past events">
                 Get the scoop on what went down in your city
               </ListItem>
-              <ListItem href="https://icons.radix-ui.com/" title="Upcoming events">
+              </Link>
+
+
+              <Link to="/upcoming">
+              <ListItem title="Upcoming events">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 Don't miss out on what's coming your way!
               </ListItem>
+              </Link>
+
             </ul>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
 
         
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
+          <NavigationMenu.Link className="NavigationMenuLink" href={"/stats"}>
             STATS
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
+          <NavigationMenu.Link className="NavigationMenuLink" href={"/contact"}>
             CONTACT
           </NavigationMenu.Link>
         </NavigationMenu.Item>

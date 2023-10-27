@@ -8,7 +8,8 @@ const Details = () => {
 
     return (
         <>
-        dfdfsfad
+        Details
+        <br />
         <p>{params.id}</p>
         </>
         )

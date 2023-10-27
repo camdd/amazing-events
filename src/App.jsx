@@ -2,38 +2,43 @@
 import './App.css'
 import '@radix-ui/themes/styles.css';
 import Home from './pages/Home.jsx'
-import Past from './pages/Past.jsx'
-import Upcoming from './pages/Upcoming.jsx'
 import Stats from './pages/Stats.jsx' 
 import Contact from './pages/Contact.jsx';
 import Details from './pages/Details.jsx'
-
+import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-
-
+import { useEffect, useState } from 'react';
 
 
 function App() {
+  let [eventos, setEventos] = useState([])
+  let [pastEvents, setPastEvents] = useState([])
+  let [upcomingEvents, setUpcomingEvents] = useState([])
+
+  useEffect(()=>{
+    axios
+      .get("https://mindhub-xj03.onrender.com/api/amazing")
+      .then((response) => {
+      setEventos(response.data.events);
+      setUpcomingEvents(response.data.events.filter(event=>event.estimate))
+      setPastEvents(response.data.events.filter(event=>event.assistance))
+    })
+}, [])
 
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" Component={Home}/>
-          <Route path="/past" Component={Past}/>
-          <Route path="/upcoming" Component={Upcoming}/>
+          <Route path="/" element={<Home title="Home" events={eventos} />}/>
+          <Route path="/past" element={<Home title="Past events" events={pastEvents} />}/>
+          <Route path="/upcoming" element={<Home title="Upcoming events" events={upcomingEvents} />}/>
           <Route path="/stats" Component={Stats}/>
           <Route path="/contact" Component={Contact}/>
           <Route path="/details/:id" Component={Details}/>
-          <Route path="*" element={<h1>404: not found</h1>}/>
+          <Route path="*" element={<div className='error'>404: not found</div>}/>
         </Routes>
       </Router>
-{/*      <Home />
-      <Upcoming />
-      <Past />
-      <Stats /> 
-      <Contact/> */}
+
     </>
   )
 }
