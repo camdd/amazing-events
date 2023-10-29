@@ -13,3 +13,8 @@
     align-items: baseline;
     text-transform: uppercase;
 }
+
+input[type=checkbox]
+{
+   -webkit-appearance:checkbox;
+}
