@@ -45,3 +45,4 @@ const Details = ({ eventos }) => {
 };
 
 export default Details;
+
