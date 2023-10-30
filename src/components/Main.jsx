@@ -5,7 +5,6 @@ import SearchFilter from './SearchFilter.jsx'
 import Checkbox from './Checkbox'
 import { useEffect, useState } from 'react'
 
-
 const Main = (props) => {
    //siempre que cambia un estado de un componente se desmonta con los datos nuevos y se vuelve a montar
     let [eventos, setEventos] = useState([]) //estado de este componente main, no confundir con events
@@ -63,5 +62,4 @@ const Main = (props) => {
         </>
     )
 }
-
 export default Main

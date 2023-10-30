@@ -34,7 +34,7 @@ function App() {
           <Route path="/upcoming" element={<Home title="Upcoming events" events={upcomingEvents} />}/>
           <Route path="/stats" Component={Stats}/>
           <Route path="/contact" Component={Contact}/>
-          <Route path="/details/:id" Component={Details}/>
+          <Route path="/details/:id" element={<Details eventos={eventos} />} /> 
           <Route path="*" element={<div className='error'>404: not found</div>}/>
         </Routes>
       </Router>

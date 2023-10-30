@@ -1,15 +1,22 @@
+/* eslint-disable react/prop-types */
 import { Card, Inset, Text, Button } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import './Card.css'
 import { Link } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
+
+
 // eslint-disable-next-line react/prop-types
 const CardComponent = ({evento}) => {
+  let navigate = useNavigate()
+  let handleDetailsClick = () => {
+    navigate(`/details/${evento._id}`);
+  }
   return (
     <>
       { evento != {} ? 
         <div className='container'>
-
           <Card size="2" style={{ maxWidth: 240 }}>
             <Inset clip="padding-box" side="top" pb="current">
               <img
@@ -26,18 +33,15 @@ const CardComponent = ({evento}) => {
               />
             </Inset>
             <Text as="p" size="3">
-              {/* eslint-disable-next-line react/prop-types */}
               <h3>{evento.name ? evento.name : "no hay titulo"}</h3>
-              {/* eslint-disable-next-line react/prop-types */}
               <p>{evento.description ? evento.description : "no hay descripción"}</p>
               <br />
               <div className='price_button'>
               <p>${evento.price}</p>
-              <Link to={"/details/:id"}>
-              <Button color="crimson" variant="soft" className='DetailsButton'>Details</Button>
+              <Link to={`/details/${evento._id}`}>
+              <Button color="crimson" variant="soft" className='DetailsButton' onClick={handleDetailsClick}>Details</Button>
               </Link>
               </div>
-
             </Text>
           </Card> 
 
