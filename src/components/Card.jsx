@@ -33,7 +33,7 @@ const CardComponent = ({evento}) => {
               <br />
               <div className='price_button'>
               <p>${evento.price}</p>
-              <Link to={"/details/:id"}>
+              <Link to={`/details/${evento._id}`}>
               <Button color="crimson" variant="soft" className='DetailsButton'>Details</Button>
               </Link>
               </div>
