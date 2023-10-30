@@ -3,8 +3,14 @@ import '@radix-ui/themes/styles.css';
 import './Card.css'
 import { Link } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
+
 // eslint-disable-next-line react/prop-types
 const CardComponent = ({evento}) => {
+  let navigate = useNavigate()
+  let handleDetailsClick = () => {
+    navigate(`/details/${evento._id}`);
+  }
   return (
     <>
       { evento != {} ? 
@@ -34,7 +40,7 @@ const CardComponent = ({evento}) => {
               <div className='price_button'>
               <p>${evento.price}</p>
               <Link to={`/details/${evento._id}`}>
-              <Button color="crimson" variant="soft" className='DetailsButton'>Details</Button>
+              <Button color="crimson" variant="soft" className='DetailsButton' onClick={handleDetailsClick}>Details</Button>
               </Link>
               </div>
 
