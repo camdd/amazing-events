@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Card, Inset, Text, Button } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import './Card.css'
 import { Link } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
 const CardComponent = ({evento}) => {
   return (
     <>
@@ -26,9 +26,7 @@ const CardComponent = ({evento}) => {
               />
             </Inset>
             <Text as="p" size="3">
-              {/* eslint-disable-next-line react/prop-types */}
               <h3>{evento.name ? evento.name : "no hay titulo"}</h3>
-              {/* eslint-disable-next-line react/prop-types */}
               <p>{evento.description ? evento.description : "no hay descripción"}</p>
               <br />
               <div className='price_button'>
@@ -37,15 +35,11 @@ const CardComponent = ({evento}) => {
               <Button color="crimson" variant="soft" className='DetailsButton'>Details</Button>
               </Link>
               </div>
-
             </Text>
           </Card> 
-
-        </div>  
-
+        </div> 
         : <></>
       } 
-
     </>
   );
 }

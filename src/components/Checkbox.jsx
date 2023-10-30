@@ -25,7 +25,6 @@ const Checkbox = ({ handleCategoryChange }) => {
             setCategoriesChecked(arrayCategoriesCheckedAux)
             handleCategoryChange(arrayCategoriesCheckedAux)
         }
-       /*  handleCategoryChange(category.id) */
     }
 
     return (
@@ -38,9 +37,8 @@ const Checkbox = ({ handleCategoryChange }) => {
                         <input type="checkbox" 
                         id={category.id} 
                         value={category.value}
-                        // eslint-disable-next-line react/prop-types
                         onChange={(e) => handleCategoryChecked(e)}/>
-                    {category.label}
+                    <p> {category.label}</p>
                 </label>
             ))}
         </div>

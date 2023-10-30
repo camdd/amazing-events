@@ -12,7 +12,7 @@ const Main = (props) => {
     let [filteredEventos, setFilteredEventos] = useState([])
     let [eventName, setEventName] = useState('');
 
-    let [selectedCategories, setSelectedCategories] = useState([])
+    let [selectedCategories] = useState([])
     
     useEffect(() => {
           setEventos(props.events)
@@ -82,9 +82,6 @@ const Main = (props) => {
                     eventName={eventName}
                     handleInputChange={handleInputChange}  
                 />
-                <button type="submit">
-                  soy un botoncito
-                </button>
             </form>
             <div className='event_cards'>
                 {filteredEventos.length > 0 ? (

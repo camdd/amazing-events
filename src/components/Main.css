@@ -1,7 +1,6 @@
 .search {
     display: flex;
     flex-direction: row;
-/*     justify-content: space-around; */
     align-items: center;
 }
 
@@ -32,4 +31,11 @@
 
 .search_bar {
     
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2em 0 2em;
 }

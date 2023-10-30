@@ -29,7 +29,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home title="Home" events={eventos} />}/>
+          <Route path="/" element={<Home title="Amazing events" events={eventos} />}/>
           <Route path="/past" element={<Home title="Past events" events={pastEvents} />}/>
           <Route path="/upcoming" element={<Home title="Upcoming events" events={upcomingEvents} />}/>
           <Route path="/stats" Component={Stats}/>
