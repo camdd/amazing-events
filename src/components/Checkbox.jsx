@@ -1,39 +1,50 @@
+import { useState } from 'react';
 import './Checkbox.css'
-import React, { useState, useEffect, useRef } from 'react';
-
-
 // eslint-disable-next-line react/prop-types
-const Checkbox = () => {
+const Checkbox = ({ handleCategoryChange }) => {
+    const categories = [
+        {id: 'food', value: 'Food', label: 'Food'},
+        {id: 'books', value: 'Books', label: 'Books'},
+        {id: 'museum', value: 'Museum', label: 'Museum'},
+        {id: 'concert', value: 'Concert', label: 'Concert'},
+        {id: 'race', value: 'Race', label: 'Race'},
+        {id: 'party', value: 'Party', label: 'Party'},
+    ];
 
+    //-necesitamos tener un array de categorías seleccionadas q después debemos darle a handlecategorychange y a su vez lo use para filtrar
+    let [categoriesChecked, setCategoriesChecked] = useState([])
 
-  return (
-    <div className="barraCheck">
-      <form className="checkbox">
-        <label htmlFor="category1">
-          <input type="checkbox" value="Food" id="category1" className="category-filter" /> Food
-        </label>
-        <label htmlFor="category2">
-          <input type="checkbox" value="Books" id="category2" className="category-filter" /> Books
-        </label>
-        <label htmlFor="category3">
-          <input type="checkbox" value="Museum" id="category3" className="category-filter" /> Museum
-        </label>
-        <label htmlFor="category4">
-          <input type="checkbox" value="Concert" id="category4" className="category-filter" /> Concert
-        </label>
-        <label htmlFor="category5">
-          <input type="checkbox" value="Race" id="category5" className="category-filter" /> Race
-        </label>
-        <label htmlFor="category6">
-          <input type="checkbox" value="Cinema" id="category6" className="category-filter" /> Cinema
-        </label>
-        <label htmlFor="category7">
-          <input type="checkbox" value="Party" id="category7" className="category-filter" /> Party
-        </label>
+    const handleCategoryChecked = (e) => {
+        if (e.target.checked){
+            let arrayCategoriesCheckedAux = [...categoriesChecked, e.target.value]
+            setCategoriesChecked(arrayCategoriesCheckedAux)
+            handleCategoryChange(arrayCategoriesCheckedAux)
 
-      </form>
-    </div>
-  );
+        } else {
+            let arrayCategoriesCheckedAux = categoriesChecked.filter((category) => e.target.value != category )
+            setCategoriesChecked(arrayCategoriesCheckedAux)
+            handleCategoryChange(arrayCategoriesCheckedAux)
+        }
+       /*  handleCategoryChange(category.id) */
+    }
+
+    return (
+        <div className="barraCheck">
+            {categories.map((category) => (
+                
+                <label 
+                    htmlFor={category.id} 
+                    key={category.id}>
+                        <input type="checkbox" 
+                        id={category.id} 
+                        value={category.value}
+                        // eslint-disable-next-line react/prop-types
+                        onChange={(e) => handleCategoryChecked(e)}/>
+                    {category.label}
+                </label>
+            ))}
+        </div>
+    );
 }
 
 export default Checkbox;
