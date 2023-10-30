@@ -2,9 +2,15 @@ import { Card, Inset, Text, Button } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import './Card.css'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 // eslint-disable-next-line react/prop-types
 const CardComponent = ({evento}) => {
+  let navigate = useNavigate()
+  let handleDetailsClick = () => {
+    navigate(`/details/${evento._id}`);
+  }
   return (
     <>
       { evento != {} ? 
@@ -33,11 +39,11 @@ const CardComponent = ({evento}) => {
               <br />
               <div className='price_button'>
               <p>${evento.price}</p>
-              <Link to={"/details/:id"}>
-              <Button color="crimson" variant="soft" className='DetailsButton'>Details</Button>
+
+              <Link to={`/details/${evento._id}`}>
+              <Button color="crimson" variant="soft" className='DetailsButton' onClick={handleDetailsClick}>Details</Button>
               </Link>
               </div>
-
             </Text>
           </Card> 
 

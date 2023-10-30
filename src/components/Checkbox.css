@@ -8,7 +8,7 @@
 
 .checkbox {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
     align-items: baseline;
     text-transform: uppercase;
