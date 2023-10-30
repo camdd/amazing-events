@@ -1,7 +1,6 @@
 .search {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -24,4 +23,19 @@
     text-transform: uppercase;
     font-weight: 200;
     margin-top: 0;
+}
+
+.checkbox {
+
+}
+
+.search_bar {
+    
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2em 0 2em;
 }

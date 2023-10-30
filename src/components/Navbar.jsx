@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
       <NavigationMenu.Root className="NavigationMenuRoot">
-        <img className='imgLogo' src={Icon} alt="" />
+        <Link to="/"><img className='imgLogo' src={Icon} alt="" /></Link>
       <NavigationMenu.List className="NavigationMenuList">
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
@@ -54,15 +54,11 @@ const Navbar = () => {
 
         
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href={"/stats"}>
-            STATS
-          </NavigationMenu.Link>
+        <Link to="/stats" className="NavigationMenuLink">STATS</Link>
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href={"/contact"}>
-            CONTACT
-          </NavigationMenu.Link>
+          <Link to="/contact" className="NavigationMenuLink">CONTACT</Link>
         </NavigationMenu.Item>
 
         <NavigationMenu.Indicator className="NavigationMenuIndicator">

@@ -43,12 +43,9 @@ const CardComponent = ({evento}) => {
               </div>
             </Text>
           </Card> 
-
-        </div>  
-
+        </div> 
         : <></>
       } 
-
     </>
   );
 }
