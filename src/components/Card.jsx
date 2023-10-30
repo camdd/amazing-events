@@ -43,7 +43,6 @@ const CardComponent = ({evento}) => {
               <Button color="crimson" variant="soft" className='DetailsButton' onClick={handleDetailsClick}>Details</Button>
               </Link>
               </div>
-
             </Text>
           </Card> 
 
