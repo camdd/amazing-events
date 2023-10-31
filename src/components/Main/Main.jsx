@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import CardComponent from "./Card";
-import SearchFilter from "./SearchFilter";
-import Checkbox from "./Checkbox";
+import CardComponent from "../Card";
+import SearchFilter from "../SearchFilter";
+import Checkbox from "../Checkbox";
 import "./Main.css";
 
 const Main = (props) => {

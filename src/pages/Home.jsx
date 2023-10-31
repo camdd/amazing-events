@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import Layout from "../layouts/Layout";
-import Main from "../components/Main";
+import Main from "../components/Main/Main";
 
 const Home = (props) => {
   return (

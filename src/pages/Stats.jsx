@@ -1,14 +1,15 @@
-import Layout from "../layouts/Layout";
-import StatsTable from "../components/StatsTable";
-import "../components/main.css";
+import Layout from "../layouts/Layout"
+import StatsTable from "../components/StatsTable"
+import '../components/Main/main.css'
 
 const Stats = () => {
-  return (
-    <Layout>
-      <h1 className="page_title">Statistics</h1>
-      <StatsTable />
-    </Layout>
-  );
-};
+    return (
+        <Layout>
+            <h1 className="page_title">Statistics</h1>
+            <StatsTable/>
+        </Layout>
+    )
+}
 
-export default Stats;
+export default Stats
+

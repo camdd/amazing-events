@@ -4,8 +4,8 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import "./Navbar.css";
-import Icon from "../assets/icon-stage.png";
-import Calendar from "../assets/calendar.png";
+import Icon from "../../assets/icon-stage.png";
+import Calendar from "../../assets/calendar.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

@@ -1,5 +1,5 @@
 import { TextField } from "@radix-ui/themes";
-import Search from "../assets/Search.png";
+import Search from "../../assets/Search.png";
 import "./SearchFilter.css";
 
 // eslint-disable-next-line react/prop-types
