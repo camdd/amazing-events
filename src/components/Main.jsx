@@ -11,25 +11,20 @@ const Main = (props) => {
     let [filteredEventos, setFilteredEventos] = useState([])
     let [eventName, setEventName] = useState('');
 
-    let [selectedCategories] = useState([])
+    let [selectedCategories, setSelectedCategories] = useState([])
+    
     
     useEffect(() => {
           setEventos(props.events)
           setFilteredEventos(props.events) //el dato que me pasaron por propiedad lo voy a setear en el estado
-
           //para el check: preguntar: el estado cambió? de ser así, volver a renderizar las cards y trabajar con variables dentro de esa función. tener una variable eventos, hacer otra variable y trabajar con esta dentro de la función para tener los datos actuales, pero el estado no va a cambiar hasta que no termine esa función, se desmonte y se vuelva a montar. ahi usar variables auxiliares dentro de la funcion, o sea variables comunes que tengan los datos pero dentro de esa función para poder trabajar
-          //
       }, [props.events]);
     
       const filterEvents = (name, categories) => {
         const eventsFilter = eventos.filter(event => {
           let nameMatch = event.name.toLowerCase().includes(name.toLowerCase())
           const categoryMatch = categories.length === 0 || categories.includes(event.category);
-
             //hacer acá la lógica para el filtro cruzado - filterEventsByCategories y filterevents además de recibir un nombre debería recibir un array
-            /* const categoryMatch= 
-            selectedCategories.length === 0 ||
-            selectedCategories.includes(event.category) */
           return nameMatch && categoryMatch
           });
         setFilteredEventos(eventsFilter);
@@ -41,13 +36,10 @@ const Main = (props) => {
       };
     
       const handleInputChange = (e) => {
-        setEventName(e.target.value);
-        if (e.target.value === '') {
-          setFilteredEventos([]);
-        } else {
-          filterEvents(e.target.value);
-        }
-      }; 
+        const inputValue = e.target.value;
+        setEventName(inputValue);
+        filterEvents(inputValue, selectedCategories);
+      };
 
       const filterEventsByCategories = (categories) => {
         let eventsFilter = eventos.filter(evento => categories.includes(evento.category))
@@ -56,16 +48,8 @@ const Main = (props) => {
       }
 
       const handleCategoryChange = (categories) => {
-        filterEventsByCategories(categories)
-
-/*         console.log('está funcionando el handleCategoryChange', category)
-        if (selectedCategories.includes(category)) {
-          console.log('la categoría ya existe, sda', category)
-          setSelectedCategories(selectedCategories.filter((cat) => cat !== category));
-        } else {
-          console.log('añado la categoría a categorías seleccionadas', category)
-          setSelectedCategories([...selectedCategories, category]);
-        } */
+        setSelectedCategories(categories);
+        filterEvents(eventName, categories);
       };
       
     return (
@@ -77,7 +61,8 @@ const Main = (props) => {
                   selectedCategories={selectedCategories}
                   handleCategoryChange={handleCategoryChange}
                 />
-                <SearchFilter className="search_bar"
+                <SearchFilter 
+                    className="search_bar"
                     eventName={eventName}
                     handleInputChange={handleInputChange}  
                 />
