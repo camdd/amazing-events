@@ -57,15 +57,6 @@ const Main = (props) => {
 
       const handleCategoryChange = (categories) => {
         filterEventsByCategories(categories)
-
-/*         console.log('está funcionando el handleCategoryChange', category)
-        if (selectedCategories.includes(category)) {
-          console.log('la categoría ya existe, sda', category)
-          setSelectedCategories(selectedCategories.filter((cat) => cat !== category));
-        } else {
-          console.log('añado la categoría a categorías seleccionadas', category)
-          setSelectedCategories([...selectedCategories, category]);
-        } */
       };
       
     return (

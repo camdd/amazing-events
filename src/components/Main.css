@@ -19,16 +19,13 @@
     font-family: 'Raleway', sans-serif;
     font-size:3em;
     color: #ffffff;
-    background-color: #DBC4F0;
+    background-color: #FFCACC;
     opacity: 0.6;
     background-size: cover;
     text-transform: uppercase;
     font-weight: 200;
     margin-top: 0;
 }
-
-
-
 
 .search {
     display: flex;

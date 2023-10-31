@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
 const CardComponent = ({evento}) => {
   let navigate = useNavigate()
   let handleDetailsClick = () => {
@@ -19,7 +18,6 @@ const CardComponent = ({evento}) => {
           <Card size="2" style={{ maxWidth: 240 }}>
             <Inset clip="padding-box" side="top" pb="current">
               <img
-                // eslint-disable-next-line react/prop-types
                 src={evento.image}
                 alt="Bold typography"
                 style={{
