@@ -25,7 +25,6 @@ const Main = (props) => {
         const eventsFilter = eventos.filter(event => 
           {let nameMatch = event.name.toLowerCase().includes(name.toLowerCase())
 
-
             //hacer acá la lógica para el filtro cruzado - filterEventsByCategories y filterevents además de recibir un nombre debería recibir un array
             /* const categoryMatch= 
             selectedCategories.length === 0 ||

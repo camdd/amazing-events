@@ -30,8 +30,8 @@ const CardComponent = ({evento}) => {
               />
             </Inset>
             <Text as="p" size="3">
-              <h3>{evento.name ? evento.name : "no hay titulo"}</h3>
-              <p>{evento.description ? evento.description : "no hay descripción"}</p>
+              <h3 className='event_title'>{evento.name ? evento.name : "no hay titulo"}</h3>
+              <p className='event_description'>{evento.description ? evento.description : "no hay descripción"}</p>
               <br />
               <div className='price_button'>
               <p>${evento.price}</p>
