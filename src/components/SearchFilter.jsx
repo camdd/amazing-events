@@ -4,7 +4,7 @@ import Search from '../assets/Search.png';
 import './SearchFilter.css'
 
 // eslint-disable-next-line react/prop-types
-const SearchFilter = ({ eventName, handleInputChange,}) => {
+const SearchFilter = ({ eventName, handleInputChange}) => {
   return (
     <div className='inputSearch'>
       <img className="img_searchbar" src={Search} alt="" />

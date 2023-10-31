@@ -21,23 +21,23 @@ const Main = (props) => {
           //
       }, [props.events]);
     
-      const filterEvents = (name) => {
-        const eventsFilter = eventos.filter(event => 
-          {let nameMatch = event.name.toLowerCase().includes(name.toLowerCase())
-
+      const filterEvents = (name, categories) => {
+        const eventsFilter = eventos.filter(event => {
+          let nameMatch = event.name.toLowerCase().includes(name.toLowerCase())
+          const categoryMatch = categories.length === 0 || categories.includes(event.category);
 
             //hacer acá la lógica para el filtro cruzado - filterEventsByCategories y filterevents además de recibir un nombre debería recibir un array
             /* const categoryMatch= 
             selectedCategories.length === 0 ||
             selectedCategories.includes(event.category) */
-          return nameMatch 
+          return nameMatch && categoryMatch
           });
         setFilteredEventos(eventsFilter);
       };
     
       const handleSearchSubmit = (event) => {
         event.preventDefault();
-        filterEvents(eventName);
+        filterEvents(eventName, selectedCategories);
       };
     
       const handleInputChange = (e) => {
