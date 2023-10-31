@@ -11,7 +11,9 @@ p {
 }
 
 .NavigationMenuRoot {
-  background-color: #FAF3F0;
+  background-image: url("../assets/background.jpg");
+  opacity: 0.6;
+  background-size: cover;
   position: relative;
   display: flex;
   justify-content: space-between;

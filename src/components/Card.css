@@ -4,13 +4,15 @@
 }
 
 .container {
-    background-color: #FAF3F0;
+    background-image: url('src/assets/background2.jpg');
+    background-size: cover;
     display: flex;
     justify-content: space-around;
     gap: 1rem;
     padding: 1rem;
     flex-wrap: wrap;
     margin: 0 auto;
+    border-radius: 15px;
     /* width: 40% */
 }
 
