@@ -3,4 +3,6 @@
     margin: 0;
     padding: 0;
     background-color: #FAF3F0;
+    height:100vh;
+    min-height : 100vh
 }

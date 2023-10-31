@@ -15,7 +15,7 @@ const CardComponent = ({evento}) => {
     <>
       { evento != {} ? 
         <div className='container'>
-          <Card size="2" style={{ maxWidth: 240 }}>
+          <Card className="card_bg" size="2" style={{ maxWidth: 240 }}>
             <Inset clip="padding-box" side="top" pb="current">
               <img
                 src={evento.image}

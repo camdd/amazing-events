@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap');
 
-.card_details{ 
-    display: flex;
-    justify-content: center;
-}
 
 .container {
     background-image: url('src/assets/background2.jpg');
@@ -14,14 +10,6 @@
     flex-wrap: wrap;
     margin: 0 auto;
     border-radius: 15px;
-}
-
-.border {  height: 369px;
-    width: 290px;
-    background: transparent;
-    border-radius: 10px;
-    transition: border 1s;
-    position: relative;
 }
 
 .card {  
@@ -36,29 +24,6 @@
     position: relative;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-
-/* .card-body, .card-title, .card-text {
-    background-color: #f68fc3 !important;
-    font-family: 'Lato', sans-serif;
-    padding: 0.5rem;
-}
-
-.card-title{
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-
-.card_img {
-    width: 100%
-}
-
-.title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 
 .price_button {
     margin-top: 1em;
