@@ -2,9 +2,7 @@
 import { Card, Inset, Text, Button } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import "./Card.css";
-import { Link } from "react-router-dom";
-
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CardComponent = ({ evento }) => {
   let navigate = useNavigate();

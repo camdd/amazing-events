@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardComponent from "../Card";
 import SearchFilter from "../SearchFilter";
 import Checkbox from "../Checkbox";
@@ -71,7 +71,7 @@ const Main = (props) => {
             <CardComponent key={index} evento={evento} />
           ))
         ) : eventName ? (
-          <p>No se encontraron eventos que coincidan con su búsqueda.</p>
+          <p>No events found matching your search.</p>
         ) : (
           eventos.map((evento, index) => (
             <CardComponent key={index} evento={evento} />

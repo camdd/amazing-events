@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
@@ -12,7 +14,7 @@ const Navbar = () => {
   return (
     <NavigationMenu.Root className="NavigationMenuRoot">
       <Link to="/">
-        <img className="imgLogo" src={Icon} alt="" />
+        <img className="imgLogo" src={Icon} alt="Logo" />
       </Link>
       <NavigationMenu.List className="NavigationMenuList">
         <NavigationMenu.Item>
@@ -47,7 +49,6 @@ const Navbar = () => {
 
               <Link to="/upcoming">
                 <ListItem title="Upcoming events">
-                  {/* eslint-disable-next-line react/no-unescaped-entities */}
                   Don't miss out on what's coming your way!
                 </ListItem>
               </Link>
@@ -79,7 +80,6 @@ const Navbar = () => {
   );
 };
 
-// eslint-disable-next-line react/display-name, react/prop-types
 const ListItem = React.forwardRef(
   ({ className, children, title, ...props }, forwardedRef) => (
     <li>
