@@ -1,12 +1,12 @@
 .inputSearch{
     display: flex;
     width: 20%;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    margin-right: 1.5em;
 }
 
 .img_searchbar {
     opacity: 1;
-    width: 12.5%;
     margin-right: 0.5em;
 }

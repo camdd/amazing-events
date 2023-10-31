@@ -20,22 +20,15 @@
     font-size:3em;
     color: #ffffff;
     background-color: #FFCACC;
+    opacity: 0.6;
+    background-size: cover;
     text-transform: uppercase;
     font-weight: 200;
     margin-top: 0;
-}
-
-.checkbox {
-
-}
-
-.search_bar {
-    
 }
 
 .search {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 2em 0 2em;
 }
