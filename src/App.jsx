@@ -1,10 +1,10 @@
 
 import './App.css'
 import '@radix-ui/themes/styles.css';
-import Home from './pages/Home.jsx'
-import Stats from './pages/Stats.jsx' 
-import Contact from './pages/Contact.jsx';
-import Details from './pages/Details.jsx'
+import Home from './pages/Home'
+import Stats from './pages/Stats' 
+import Contact from './pages/Contact';
+import Details from './pages/Details'
 import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';

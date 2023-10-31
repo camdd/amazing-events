@@ -1,5 +1,5 @@
 import Layout from "../layouts/Layout";
-import Form from "../components/Form.jsx";
+import Form from "../components/Form";
 import "./Contact.css";
 import "../components/main.css";
 
