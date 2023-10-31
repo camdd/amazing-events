@@ -1,12 +1,11 @@
-
-import { TextField } from '@radix-ui/themes';
-import Search from '../assets/Search.png';
-import './SearchFilter.css'
+import { TextField } from "@radix-ui/themes";
+import Search from "../assets/Search.png";
+import "./SearchFilter.css";
 
 // eslint-disable-next-line react/prop-types
-const SearchFilter = ({ eventName, handleInputChange, }) => {
+const SearchFilter = ({ eventName, handleInputChange }) => {
   return (
-    <div className='inputSearch'>
+    <div className="inputSearch">
       <img className="img_searchbar" src={Search} alt="" />
       <TextField.Root>
         <TextField.Input
@@ -17,6 +16,6 @@ const SearchFilter = ({ eventName, handleInputChange, }) => {
       </TextField.Root>
     </div>
   );
-}
+};
 
 export default SearchFilter;
