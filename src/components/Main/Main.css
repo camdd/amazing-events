@@ -1,8 +1,4 @@
-.search {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 
 .event_cards {
     display: flex;
@@ -10,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 2em;
+    background-color: #faf3f0;
 }
 
 .page_title {
@@ -30,5 +27,7 @@
 .search {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around !important;
+    flex-direction: row;
+
 }

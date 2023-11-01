@@ -12,45 +12,28 @@ const CardComponent = ({ evento }) => {
   return (
     <>
       {evento != {} ? (
-        <div className="container">
-          <Card className="card_bg" size="2" style={{ maxWidth: 240 }}>
-            <Inset clip="padding-box" side="top" pb="current">
-              <img
-                src={evento.image}
-                alt="Bold typography"
-                style={{
-                  display: "block",
-                  objectFit: "cover",
-                  width: "100%",
-                  height: 140,
-                  backgroundColor: "var(--gray-5)",
-                }}
-              />
-            </Inset>
-            <Text as="p" size="3">
-              <h3 className="event_title">
-                {evento.name ? evento.name : "no hay titulo"}
-              </h3>
-              <p className="event_description">
-                {evento.description ? evento.description : "no hay descripción"}
-              </p>
-              <br />
-              <div className="price_button">
-                <p>${evento.price}</p>
-                <Link to={`/details/${evento._id}`}>
-                  <Button
-                    color="crimson"
-                    variant="soft"
-                    className="DetailsButton"
-                    onClick={handleDetailsClick}
-                  >
-                    Details
-                  </Button>
-                </Link>
+        <div className="card-container">
+          <li className="card">
+          <Link to={`/details/${evento._id}`} className="card__link">
+            <img src={evento.image} className="card__image" alt="" />
+            <div className="card__overlay">
+              <div className="card__header">
+                
+                <div className="card__header-text">
+                  <h3 className="card__title">
+                    {evento.name ? evento.name : "No Title"}
+                  </h3>
+                  <span className="card__status">{evento.date}</span>
+                </div>
               </div>
-            </Text>
-          </Card>
+              <p className="card__description">
+                {evento.description ? evento.description : "No Description"}
+              </p>
+            </div>
+          </Link>
+        </li>
         </div>
+        
       ) : (
         <></>
       )}
