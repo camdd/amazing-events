@@ -10,8 +10,9 @@ const Details = ({ eventos }) => {
   const evento = eventos.find((evento) => evento._id.toString() === id);
 
   return (
-    <Layout>
-      {evento ? (
+        <Layout>
+          <div className="bg_details">
+          {evento ? (
         <div className="card_details">
           <Inset clip="padding-box" side="top" pb="current">
             <img
@@ -32,10 +33,11 @@ const Details = ({ eventos }) => {
               {evento.date} at {evento.place}{" "}
             </h3>
             <p>{evento.description}</p>
+            <br />
             <p>Category: {evento.category}</p>
-
+              <br />
             <p>Price: ${evento.price}</p>
-            <Button>
+            <Button className="btn_back">
               <Link className="go_back" to="/">
                 Go Back
               </Link>
@@ -45,7 +47,11 @@ const Details = ({ eventos }) => {
       ) : (
         <div>Evento no encontrado.</div>
       )}
+          </div>
+      
     </Layout>
+
+    
   );
 };
 

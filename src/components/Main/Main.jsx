@@ -5,6 +5,7 @@ import CardComponent from "../Card";
 import SearchFilter from "../SearchFilter";
 import Checkbox from "../Checkbox";
 import "./Main.css";
+/* import "../Card/Card.css" */
 
 const Main = (props) => {
   let [eventos, setEventos] = useState([]);
@@ -73,9 +74,11 @@ const Main = (props) => {
         ) : eventName ? (
           <p>No events found matching your search.</p>
         ) : (
-          eventos.map((evento, index) => (
+          <div className="card-container">
+          {eventos.map((evento, index) => (
             <CardComponent key={index} evento={evento} />
-          ))
+          ))}
+        </div>
         )}
       </div>
     </>

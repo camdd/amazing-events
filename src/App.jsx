@@ -17,7 +17,7 @@ function App() {
 
   useEffect(()=>{
     axios
-      .get("https://mindhub-xj03.onrender.com/api/amazing")
+      .get("src/data/data.json")
       .then((response) => {
       setEventos(response.data.events);
       setUpcomingEvents(response.data.events.filter(event=>event.estimate))

@@ -2,7 +2,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #FAF3F0;
+    background: url("src/assets/background6.jpg");
     height:100vh;
     min-height : 100vh
 }
