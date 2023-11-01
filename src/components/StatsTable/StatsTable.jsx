@@ -16,7 +16,7 @@ const StatsTable = () => {
 
   useEffect(() => {
     axios
-      .get('https://mindhub-xj03.onrender.com/api/amazing')
+      .get('src/data/data.json')
       .then((response) => {
         const fetchedData = response.data;
         processData(fetchedData);
