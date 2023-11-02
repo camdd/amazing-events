@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useParams } from "react-router-dom";
 import Layout from "../layouts/Layout";
-import { Link } from "react-router-dom";
 import "./Details.css";
-import { Inset, Button } from "@radix-ui/themes";
+import { Inset } from "@radix-ui/themes";
+import ButtonGoBack from "../components/ButtonGoBack";
+
 
 const Details = ({ eventos }) => {
   const { id } = useParams();
@@ -11,7 +12,7 @@ const Details = ({ eventos }) => {
 
   return (
         <Layout>
-          <div className="bg_details">
+          <div className="bg_details" role="detailsElement">
           {evento ? (
         <div className="card_details">
           <Inset clip="padding-box" side="top" pb="current">
@@ -37,11 +38,8 @@ const Details = ({ eventos }) => {
             <p>Category: {evento.category}</p>
               <br />
             <p>Price: ${evento.price}</p>
-            <Button className="btn_back">
-              <Link className="go_back" to="/">
-                Go Back
-              </Link>
-            </Button>
+              <ButtonGoBack/>
+              
           </div>
         </div>
       ) : (

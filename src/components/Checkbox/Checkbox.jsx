@@ -28,7 +28,7 @@ const Checkbox = ({ handleCategoryChange }) => {
   };
 
   return (
-    <div className="barraCheck">
+    <div className="barraCheck" role="checkboxElement">
       {categories.map((category) => (
         <label htmlFor={category.id} key={category.id}>
           <input

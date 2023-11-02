@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <NavigationMenu.Root className="NavigationMenuRoot">
+    <NavigationMenu.Root className="NavigationMenuRoot" role="navbarElement">
       <Link to="/">
         <img className="imgLogo" src={Icon} alt="Logo" />
       </Link>

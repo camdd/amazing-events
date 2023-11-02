@@ -5,7 +5,6 @@ import CardComponent from "../Card";
 import SearchFilter from "../SearchFilter";
 import Checkbox from "../Checkbox";
 import "./Main.css";
-/* import "../Card/Card.css" */
 
 const Main = (props) => {
   let [eventos, setEventos] = useState([]);
@@ -52,8 +51,8 @@ const Main = (props) => {
   };
 
   return (
-    <>
-      <h1 className="page_title text-shadow-diagonal">{props.title}</h1>
+    <> 
+      <h1 className="page_title text-shadow-diagonal" role="mainElement">{props.title}</h1>
       <form className="search" onSubmit={handleSearchSubmit}>
         <Checkbox
           className="checkbox"

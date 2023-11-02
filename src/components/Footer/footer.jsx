@@ -5,7 +5,7 @@ import Twitter from "../../assets/twitter.png";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" role="footerElement">
       <ul className="navbar__items">
         <li className="navbar__item smediaicon">
           <a className="navbar__link" href="https://www.instagram.com/">

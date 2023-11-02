@@ -2,7 +2,7 @@ import * as Form from "@radix-ui/react-form";
 import "./Form.css";
 
 const FormDemo = () => (
-  <div className="FormContainer">
+  <div className="FormContainer" role="formElement">
     <Form.Root className="FormRoot">
       <Form.Field className="FormField" name="name">
         <div

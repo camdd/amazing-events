@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Card, Inset, Text, Button } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
@@ -12,7 +13,7 @@ const CardComponent = ({ evento }) => {
   return (
     <>
       {evento != {} ? (
-        <div className="card-container">
+        <div className="card-container" role="cardElement">
           <li className="card">
           <Link to={`/details/${evento._id}`} className="card__link">
             <img src={evento.image} className="card__image" alt="" />

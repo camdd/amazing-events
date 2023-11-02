@@ -5,7 +5,7 @@ import "./SearchFilter.css";
 
 const SearchFilter = ({ eventName, handleInputChange }) => {
   return (
-    <div className="inputSearch">
+    <div className="inputSearch" role="searchElement">
       <img className="img_searchbar" src={Search} alt="Search" />
       <TextField.Root>
         <TextField.Input
