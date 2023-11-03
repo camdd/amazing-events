@@ -1,20 +1,19 @@
 /* eslint-disable no-undef */
-import {render, screen} from '@testing-library/react'
-import '@testing-library/jest-dom'
-import SearchFilter from '../components/SearchFilter'
-import { BrowserRouter as Router } from 'react-router-dom' 
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SearchFilter from '../components/SearchFilter';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-describe('<SearchFilter  />', () => {
-    
-    test('testeo SearchFilter ', ()=> {
+describe('<SearchFilter />', () => {
+  test('testeo SearchFilter', () => {
+    render(
+      <Router>
+        <SearchFilter eventName="" handleInputChange={() => {}} />
+      </Router>
+    );
 
-        render(
-        <Router>
-            <SearchFilter />
-        </Router>
-        )
-        let searchElement = screen.getByRole("searchElement")
-        expect(searchElement).toBeInTheDocument()
-    })
-})
+    let searchElement = screen.getByRole("searchElement");
+    expect(searchElement).toBeInTheDocument();
+  });
+});
 

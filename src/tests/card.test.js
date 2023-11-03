@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-import {render, screen, fireEvent} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import CardComponent from '../components/Card/Card'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router,  } from 'react-router-dom'
 
 
 describe('<Card />', () => {

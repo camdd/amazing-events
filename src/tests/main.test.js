@@ -13,7 +13,7 @@ describe('<Main />', () => {
             <Main events={[]}/>
         </Router>
         )
-        let mainElement = screen.getByRole("mainElement") //creo q no debería hacerlo por role acá, veremos
+        let mainElement = screen.getByRole("mainElement") 
         expect(mainElement).toBeInTheDocument()
     })
 

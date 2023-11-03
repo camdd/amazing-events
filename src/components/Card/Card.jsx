@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { Card, Inset, Text, Button } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import "./Card.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -33,8 +32,7 @@ const CardComponent = ({ evento }) => {
             </div>
           </Link>
         </li>
-        </div>
-        
+        </div> 
       ) : (
         <></>
       )}
