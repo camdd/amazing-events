@@ -6,7 +6,7 @@ const Home = (props) => {
   return (
     <div role="homeElement">
       <Layout>
-        <Main title={props.title} events={props.events} />
+        <Main title={props.title} />
       </Layout>
     </div>
   );
