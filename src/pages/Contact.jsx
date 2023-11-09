@@ -1,7 +1,7 @@
 import Layout from "../layouts/Layout";
 import Form from "../components/Form";
 import "./Contact.css";
-import "../components/Main/main.css";
+import "../components/Main/Main.css";
 
 const Contact = () => {
   return (

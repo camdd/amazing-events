@@ -11,17 +11,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import eventosActions from './store/actions/eventosActions';
 
 
-
 function App() {
-
 
 const dispatch = useDispatch()
 const eventos = useSelector(store => store.eventos)
 
   useEffect(()=>{
-
     dispatch(eventosActions.get_eventos())
-
 }, [])
 
   return (

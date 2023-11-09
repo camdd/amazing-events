@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { TextField } from "@radix-ui/themes";
-import Search from "../../assets/Search.png";
+import Search from "assets/search.png";
 import "./SearchFilter.css";
 
 const SearchFilter = ({ eventName, handleInputChange }) => {

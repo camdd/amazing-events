@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Header from "../components/Header/header";
+import Header from "components/Header/Header.jsx";
 import Footer from "../components/Footer";
 import "./Layout.css";
 
