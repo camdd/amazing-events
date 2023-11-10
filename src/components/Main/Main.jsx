@@ -61,7 +61,7 @@ const Main = ({title}) => {
   };
 
   return (
-    <> 
+      <>
       <h1 className="page_title text-shadow-diagonal" role="mainElement">{title}</h1>
       <form className="search" onSubmit={handleSearchSubmit}>
         <Checkbox
@@ -90,7 +90,7 @@ const Main = ({title}) => {
         </div>
         )}
       </div>
-    </>
+      </>
   );
 };
 
