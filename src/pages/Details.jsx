@@ -13,11 +13,8 @@ const Details = () => {
   const { id } = useParams();
   const evento = eventos.find((evento) => evento._id.toString() === id);
   
-  //estamos con detalles, no sé como plantear bien mi duda pero sería algo así como yo dentro de mi función creo mi variable eventos en donde hago uso del useselector para acceder al store. luego en vez de props mi componente details recibe estos datos a los que accede desde el store. pero lo puedo pasar como parámetro si recién lo estoy declarando dentro de la función? por eso no entendí el "recibe", si lo estoy recién escribiendo dentro de la función 🥴 
-  
-
   return (
-        <Layout>
+    <Layout>
           <div className="bg_details" role="detailsElement">
           {evento ? (
         <div className="card_details">
@@ -52,10 +49,7 @@ const Details = () => {
         <div>Evento no encontrado.</div>
       )}
           </div>
-      
     </Layout>
-
-    
   );
 };
 

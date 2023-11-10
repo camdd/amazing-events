@@ -1,4 +1,3 @@
-
 import './App.css'
 import '@radix-ui/themes/styles.css';
 import Home from './pages/Home'
@@ -9,7 +8,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect, } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import eventosActions from './store/actions/eventosActions';
-
 
 function App() {
 

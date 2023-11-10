@@ -6,9 +6,6 @@ import SearchFilter from "../SearchFilter";
 import Checkbox from "../Checkbox";
 import "./Main.css";
 import { useSelector } from "react-redux";
-import Provider from "react-redux";
-
-
 
 //main ya no recibe props, si no que recibe un nombre q esté en todas las vistas que quiero usar en el filtro, en este caso titulo sería lo que tienen en comun past y upcoming entonces podría usar title en vez de props. si title es past mostrar los eventos filtrados x pasado y así con futuro. el dispatch se usa una sola vez en app y luego uso useselector para poder acceder a los eventos que están en mi store
 //englobar main y details en un provider
@@ -64,7 +61,7 @@ const Main = ({title}) => {
   };
 
   return (
-    <Provider> 
+    <> 
       <h1 className="page_title text-shadow-diagonal" role="mainElement">{title}</h1>
       <form className="search" onSubmit={handleSearchSubmit}>
         <Checkbox
@@ -93,7 +90,7 @@ const Main = ({title}) => {
         </div>
         )}
       </div>
-    </Provider>
+    </>
   );
 };
 
