@@ -1,21 +1,22 @@
 
 footer {
-    background-color: #D4E2D4;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    background-image: url("src/assets/background4.jpg");
 }
 
 .navbar__items {
+    height: 3em;
     display: flex;
     justify-content: center;
     gap: 1rem;
     align-items: center;
     list-style-type: none;
+    margin: 0;
+    padding: 1em;
 }
 
 .navbar__item, .social {
+    display: flex;
     background-color: #D4E2D4;
+    border-radius: 20px;
     width: 2.2em;
 }
