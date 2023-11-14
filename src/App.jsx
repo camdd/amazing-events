@@ -22,7 +22,7 @@ const eventos = useSelector(store => store.eventos)
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home title="Amazing events" />}/>
+          <Route path="/" element={<Home title="events" />}/>
           <Route path="/past" element={<Home title="Past events" />}/>
           <Route path="/upcoming" element={<Home title="Upcoming events" />}/>
           <Route path="/stats" Component={Stats}/>
