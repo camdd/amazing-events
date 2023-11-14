@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Table } from '@radix-ui/themes';
 import './StatsTable.css';
-import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 const StatsTable = () => {
   const [data, setData] = useState({
@@ -11,20 +11,13 @@ const StatsTable = () => {
     maxCapacityEvent: null,
   });
 
+  const eventos = useSelector(store => store.eventos)
   const [upcomingEventsData, setUpcomingEventsData] = useState([]);
   const [pastEventsData, setPastEventsData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get('src/data/data.json')
-      .then((response) => {
-        const fetchedData = response.data;
-        processData(fetchedData);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-  }, []);
+    processData();
+  }, [eventos]);
 
   function formatPercentage(a, b) {
     return ((a / b) * 100).toFixed(2) + '%';
@@ -49,12 +42,12 @@ const StatsTable = () => {
     });
   }
 
-  function processData(data) {
+  function processData() {
     const pastEventsCategoryStats = {};
     const futureEventsCategoryStats = {};
 
-    const pastEvents = data.events.filter((event) => event.assistance);
-    const futureEvents = data.events.filter((event) => !event.assistance);
+    const pastEvents = eventos.filter((event) => event.assistance);
+    const futureEvents = eventos.filter((event) => !event.assistance);
 
     pastEvents.forEach((event) => {
       const category = event.category;
@@ -93,7 +86,7 @@ const StatsTable = () => {
   }
 
   return (
-    <div>
+    <div role="statsTableElement">
       <div className="tableContainer">
         <div className="tableTitle">EVENTS STATISTICS</div>
         <Table.Root id="statistics" variant="surface">

@@ -1,6 +1,7 @@
 @import '@radix-ui/colors/black-alpha.css';
 @import '@radix-ui/colors/violet.css';
 @import '@radix-ui/colors/mauve.css';
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;400;700&display=swap');
 
 /* reset */
 input,
@@ -11,14 +12,29 @@ button {
 }
 
 .FormContainer {
+  font-family: 'Hanken Grotesk', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  height: 100vh;
+  background-image: url("src/assets/background7.jpg");
+  background-size:cover
+}
+
+.contact_title {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  font-size: 1.5em;
+  padding: 1em;
+  color: #ffffff;
+  margin-top: 5em;
 }
 
 .FormRoot {
-  width: 35%;
+  width: 45%;
 }
 
 .FormField {
@@ -30,12 +46,12 @@ button {
   font-size: 15px;
   font-weight: 500;
   line-height: 35px;
-  color: #796191;
+  color: #ffffff;
 }
 
 .FormMessage {
   font-size: 13px;
-  color: #796191;
+  color: rgb(209, 3, 3);
   opacity: 0.8;
 }
 
@@ -58,11 +74,11 @@ button {
 }
 .Input:focus,
 .Textarea:focus {
-  box-shadow: 0 0 0 1px #12d9e3;
+  box-shadow: 0 0 0 1px #ff72fc;
 }
 .Input::selection,
 .Textarea::selection {
-  background-color: #12d9e3;
+  background-color: #ff72fc;
   color: white;
 }
 
@@ -94,9 +110,9 @@ button {
   box-shadow: 0 2px 10px #DBC4F0;
 }
 .Button:hover {
-  background-color: #FFCACC;
+  background-color: #eed8ff;
   transition: background-color 0.1s ease-in 0.05s;
 }
 .Button:focus {
-  box-shadow: 0 0 0 2px black;
+  box-shadow: 0 0 0 2px #ff72fc;
 }

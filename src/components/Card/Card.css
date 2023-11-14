@@ -1,5 +1,5 @@
 
- @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;400;700&display=swap');
 
 :root {
     --surface-color: #fff;
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     background-color: #fef8f8;
 }
 
@@ -83,7 +83,7 @@ body {
     padding: 0 2em 1em;
     margin: 0;
     color: #D7BDCA;
-    font-family: "Lato", sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;

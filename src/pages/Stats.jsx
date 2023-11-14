@@ -1,11 +1,11 @@
 import Layout from "../layouts/Layout"
 import StatsTable from "../components/StatsTable"
-import '../components/Main/main.css'
+import '../components/Main/Main.css'
 
 const Stats = () => {
     return (
         <Layout>
-            <h1 className="page_title">Statistics</h1>
+            <h1 className="page_title" >Statistics</h1>
             <StatsTable/>
         </Layout>
     )

@@ -1,17 +1,21 @@
 /* eslint-disable react/prop-types */
 import { useParams } from "react-router-dom";
 import Layout from "../layouts/Layout";
-import { Link } from "react-router-dom";
 import "./Details.css";
-import { Inset, Button } from "@radix-ui/themes";
+import { Inset } from "@radix-ui/themes";
+import ButtonGoBack from "../components/ButtonGoBack";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
-const Details = ({ eventos }) => {
+
+
+const Details = () => {
+  const eventos = useSelector(store => store.eventos)
   const { id } = useParams();
   const evento = eventos.find((evento) => evento._id.toString() === id);
-
+  
   return (
-        <Layout>
-          <div className="bg_details">
+    <Layout>
+          <div className="bg_details" role="detailsElement">
           {evento ? (
         <div className="card_details">
           <Inset clip="padding-box" side="top" pb="current">
@@ -37,21 +41,15 @@ const Details = ({ eventos }) => {
             <p>Category: {evento.category}</p>
               <br />
             <p>Price: ${evento.price}</p>
-            <Button className="btn_back">
-              <Link className="go_back" to="/">
-                Go Back
-              </Link>
-            </Button>
+              <ButtonGoBack/>
+              
           </div>
         </div>
       ) : (
         <div>Evento no encontrado.</div>
       )}
           </div>
-      
     </Layout>
-
-    
   );
 };
 

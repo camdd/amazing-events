@@ -1,37 +1,30 @@
-
 import './App.css'
 import '@radix-ui/themes/styles.css';
 import Home from './pages/Home'
 import Stats from './pages/Stats' 
 import Contact from './pages/Contact';
 import Details from './pages/Details'
-import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-
+import { useEffect, } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import eventosActions from './store/actions/eventosActions';
 
 function App() {
-  let [eventos, setEventos] = useState([])
-  let [pastEvents, setPastEvents] = useState([])
-  let [upcomingEvents, setUpcomingEvents] = useState([])
+
+const dispatch = useDispatch()
+const eventos = useSelector(store => store.eventos)
 
   useEffect(()=>{
-    axios
-      .get("src/data/data.json")
-      .then((response) => {
-      setEventos(response.data.events);
-      setUpcomingEvents(response.data.events.filter(event=>event.estimate))
-      setPastEvents(response.data.events.filter(event=>event.assistance))
-    })
+    dispatch(eventosActions.get_eventos())
 }, [])
 
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home title="Amazing events" events={eventos} />}/>
-          <Route path="/past" element={<Home title="Past events" events={pastEvents} />}/>
-          <Route path="/upcoming" element={<Home title="Upcoming events" events={upcomingEvents} />}/>
+          <Route path="/" element={<Home title="events" />}/>
+          <Route path="/past" element={<Home title="Past events" />}/>
+          <Route path="/upcoming" element={<Home title="Upcoming events" />}/>
           <Route path="/stats" Component={Stats}/>
           <Route path="/contact" Component={Contact}/>
           <Route path="/details/:id" element={<Details eventos={eventos} />} /> 

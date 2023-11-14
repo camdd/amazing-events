@@ -1,11 +1,11 @@
-import Header from "../components/Header/header";
+/* eslint-disable react/prop-types */
+import Header from "components/Header/Header.jsx";
 import Footer from "../components/Footer";
 import "./Layout.css";
 
-// eslint-disable-next-line no-unused-vars, react/prop-types
 const Layout = ({ children }) => {
   return (
-    <div className="containerLayout">
+    <div className="containerLayout" role="layoutContainer">
       <Header title="Titulo principal" description="description" />
       {children}
       <Footer />

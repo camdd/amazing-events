@@ -6,15 +6,15 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import "./Navbar.css";
-import Icon from "../../assets/icon-stage.png";
+import Logo from "../../assets/amazing-logo.png"
 import Calendar from "../../assets/calendar.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <NavigationMenu.Root className="NavigationMenuRoot">
-      <Link to="/">
-        <img className="imgLogo" src={Icon} alt="Logo" />
+    <NavigationMenu.Root className="NavigationMenuRoot" role="navbarElement">
+      <Link className="logos" to="/">
+        <img className="amazing-logo" src={Logo} alt="" />
       </Link>
       <NavigationMenu.List className="NavigationMenuList">
         <NavigationMenu.Item>
@@ -29,26 +29,26 @@ const Navbar = () => {
                     <img src={Calendar} className="calendar" />
                     <div className="CalloutHeading">AMAZING EVENTS</div>
                     <p className="CalloutText">
-                      Explore the top events in your city
+                       Explore the top events in your city
                     </p>
                   </Link>
                 </NavigationMenu.Link>
               </li>
 
               <Link to="/">
-                <ListItem title="All events">
+                <ListItem className="list-item-link" title="All events">
                   Check out all the cool events!
                 </ListItem>
               </Link>
 
               <Link to="/past">
-                <ListItem title="Past events">
+                <ListItem className="list-item-link" title="Past events">
                   Get the scoop on what went down in your city
                 </ListItem>
               </Link>
 
               <Link to="/upcoming">
-                <ListItem title="Upcoming events">
+                <ListItem className="list-item-link" title="Upcoming events">
                   Don't miss out on what's coming your way!
                 </ListItem>
               </Link>
