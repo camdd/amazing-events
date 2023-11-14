@@ -1,5 +1,5 @@
 .containerLayout {
-    width: 100%;
+    width: 100% !important;
     margin: 0;
     padding: 0;
     background: url("src/assets/background6.jpg");
