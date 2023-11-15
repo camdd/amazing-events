@@ -6,15 +6,26 @@ import { Inset } from "@radix-ui/themes";
 import ButtonGoBack from "../components/ButtonGoBack";
 import ButtonBuyTickets from "../components/ButtonBuy";
 import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useEffect, useState } from "react";
 
 const Details = () => {
   const eventos = useSelector((store) => store.eventos);
   const { id } = useParams();
   const evento = eventos.find((evento) => evento._id.toString() === id);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <Layout>
-      <div className="bg_details" role="detailsElement">
+      <div
+        className={`bg_details ${
+          mounted ? "details-enter-active" : "details-enter"
+        }`}
+        role="detailsElement"
+      >
         {evento ? (
           <div className="details_container">
             <div className="banner">
@@ -36,8 +47,12 @@ const Details = () => {
                     {evento.date} at {evento.place}{" "}
                   </h3>
                   <p>{evento.description}</p>
-                  <p>Category: {evento.category}</p>
-                  <p>Price: ${evento.price}</p>
+                  <p>
+                    <strong>Category:</strong> {evento.category}
+                  </p>
+                  <p>
+                    <strong>Price: </strong>${evento.price}
+                  </p>
                 </div>
               </div>
               <div className="image_column">
@@ -53,8 +68,8 @@ const Details = () => {
                       }}
                     />
                     <div className="buttons">
-                    <ButtonGoBack />
-                    <ButtonBuyTickets />
+                      <ButtonBuyTickets />
+                      <ButtonGoBack />
                     </div>
                   </div>
                 </Inset>

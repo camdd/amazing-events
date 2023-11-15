@@ -2,9 +2,17 @@
     color: #000;
     text-decoration: none;
     background-color: #fdc6c6;
-    width: 30vh;
+    width: 35vh;
     height: 4vh;
     display: flex;
     margin-top: 1.5em;
     border-radius: 10px;
+  }
+
+  .btn_back a {
+    text-decoration: none;
+  }
+  
+  .btn_back:active a {
+    color: inherit;
   }
