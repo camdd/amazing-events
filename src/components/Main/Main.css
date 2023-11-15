@@ -9,7 +9,6 @@
     justify-content: center;
     padding: 2em;
     background-color: #ffffff;
-    width: 100%;
 }
 
 .page_title {
@@ -18,16 +17,16 @@
     align-items: center;
     background-image: url("src/assets/background7.jpg");
     background-size:cover;
-    font-family: 'Hanken Grotesk', sans-serif !important;
-    font-size: 3.5em !important;
-    color:  #ffffff !important;
+    font-family: 'Hanken Grotesk', sans-serif ;
+    font-size: 3.5em;
+    color:  #ffffff;
     background-color: #cc63f9;
     text-transform: uppercase;
-    font-weight: 400 !important;
+    font-weight: 400;
     width: 100%;
-    height: 2.5em;
-    margin-top: 0;
-    margin-bottom: 0;
+    min-height: 2em;
+    margin: 0;
+
 }
 
 .search {
@@ -37,7 +36,7 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    justify-content: space-around !important;
+    justify-content: space-between !important;
     flex-direction: row;
 }
 
