@@ -5,5 +5,13 @@
     margin-top: 3em;
 }
 
+.app-enter {
+    opacity: 0;
+  }
+  
+  .app-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
 
 
