@@ -1,18 +1,18 @@
 import { Button } from "@radix-ui/themes";
 import { Link } from "react-router-dom";
-import './ButtonGoBack.css';
+import './ButtonBuyTickets.css';
 
-const ButtonGoBack = () => {
+const ButtonBuyTickets = () => {
     return(
         <>
 
-        <Button className="btn_back" role="buttonElement">
+        <Button className="buy_tickets_button" role="buttonElement">
               <Link className="go_back" to="/">
-                Go Back
+                Buy Tickets
               </Link>
             </Button>
         </>
     )
 }
 
-export default ButtonGoBack
+export default ButtonBuyTickets

@@ -1,0 +1,10 @@
+.buy_tickets_button {
+    color: #000;
+    text-decoration: none;
+    background-color: #fdc6c6;
+    width: 30vh;
+    height: 4vh;
+    display: flex;
+    margin-top: 1.5em;
+    border-radius: 10px;
+  }
