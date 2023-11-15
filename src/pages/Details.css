@@ -25,9 +25,7 @@
   backdrop-filter: blur(15px);
   padding: 30px;
   color: #224;
-
 }
-
 
 .card_details img {
   width: 400px;
@@ -53,7 +51,7 @@ h3 {
 .card_details button {
   color: #000;
   text-decoration: none;
-  background-color: #DBC4F0;
+  background-color: #fdc6c6;
   width: 30%;
 }
 
