@@ -20,10 +20,11 @@ const CardComponent = ({ evento }) => {
               <div className="card__header">
                 
                 <div className="card__header-text">
+                <span className="card__status">{evento.date}</span>
                   <h3 className="card__title">
                     {evento.name ? evento.name : "No Title"}
                   </h3>
-                  <span className="card__status">{evento.date}</span>
+
                 </div>
               </div>
               <p className="card__description">

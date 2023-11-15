@@ -19,17 +19,17 @@ const Details = () => {
           {evento ? (
         <div className="card_details">
           <Inset clip="padding-box" side="top" pb="current">
+            <div className="rounded-image">
             <img
               src={evento.image}
               alt="Bold typography"
               style={{
                 display: "block",
                 objectFit: "cover",
-                width: "100%",
-                height: 140,
                 backgroundColor: "var(--gray-5)",
               }}
             />
+            </div>
           </Inset>
           <div className="details_content">
             <h2>{evento.name}</h2>
@@ -37,9 +37,7 @@ const Details = () => {
               {evento.date} at {evento.place}{" "}
             </h3>
             <p>{evento.description}</p>
-            <br />
             <p>Category: {evento.category}</p>
-              <br />
             <p>Price: ${evento.price}</p>
               <ButtonGoBack/>
               
