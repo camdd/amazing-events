@@ -6,9 +6,11 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import "./Navbar.css";
-import Logo from "../../assets/amazing-logo.png"
+import Logo from "../../assets/amazing-logo.png";
 import Calendar from "../../assets/calendar.png";
 import { Link } from "react-router-dom";
+import User from "../../assets/user.png";
+import ShoppingCart from "../ShoppingCart";
 
 const Navbar = () => {
   return (
@@ -18,6 +20,8 @@ const Navbar = () => {
       </Link>
       <NavigationMenu.List className="NavigationMenuList">
         <NavigationMenu.Item>
+
+          {/* EVENTS TRIGGER*/}
           <NavigationMenu.Trigger className="NavigationMenuTrigger">
             EVENTS <CaretDownIcon className="CaretDown" aria-hidden />
           </NavigationMenu.Trigger>
@@ -29,7 +33,7 @@ const Navbar = () => {
                     <img src={Calendar} className="calendar" />
                     <div className="CalloutHeading">AMAZING EVENTS</div>
                     <p className="CalloutText">
-                       Explore the top events in your city
+                      Explore the top events in your city
                     </p>
                   </Link>
                 </NavigationMenu.Link>
@@ -57,15 +61,41 @@ const Navbar = () => {
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
+
+          {/* STATS */}
           <Link to="/stats" className="NavigationMenuLink">
             STATS
           </Link>
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
+
+          {/* CONTACT */}
           <Link to="/contact" className="NavigationMenuLink">
             CONTACT
           </Link>
+        </NavigationMenu.Item>
+
+        <ShoppingCart/>
+
+        <NavigationMenu.Item>
+          {/* USER */}
+          <NavigationMenu.Trigger className="NavigationMenuTrigger">
+              <img className="social" src={User} alt="" />
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content className="NavigationMenuContent">
+            <ul className="List one">
+              <li style={{ gridRow: "span 3" }}>
+                <Link to="/">
+                  <ListItem className="list-item-link" title="Login" />
+                </Link>
+
+                <Link to="/">
+                  <ListItem className="list-item-link" title="Register" />
+                </Link>
+              </li>
+            </ul>
+          </NavigationMenu.Content>
         </NavigationMenu.Item>
 
         <NavigationMenu.Indicator className="NavigationMenuIndicator">
