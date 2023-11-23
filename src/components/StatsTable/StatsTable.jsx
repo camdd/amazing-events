@@ -86,7 +86,7 @@ const StatsTable = () => {
   }
 
   return (
-    <div role="statsTableElement">
+    <div role="statsTableElement" className='stats-background'>
       <div className="tableContainer">
         <div className="tableTitle">EVENTS STATISTICS</div>
         <Table.Root id="statistics" variant="surface">

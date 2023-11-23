@@ -32,7 +32,6 @@ a {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  width: 25%;  
 }
 
 .amazing-logo {
@@ -69,9 +68,10 @@ a {
 .NavigationMenuLink:focus {
   box-shadow: 0 0 0 2px #983cc4;
 }
+
 .NavigationMenuTrigger:hover,
 .NavigationMenuLink:hover {
-  background-color: #ffd9fe ;
+  background-color: #ffedfe ;
 }
 
 .NavigationMenuTrigger {
@@ -188,7 +188,7 @@ a {
   box-shadow: 0 0 0 2px var(--violet-7);
 }
 .ListItemLink:hover {
-  background-color: #ffd6fe;
+  background-color: #ffedfe;
 }
 
 .ListItemHeading {
@@ -210,7 +210,7 @@ a {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #ffe8e8  10%, #f5e8ff 90%);
+  background: linear-gradient(135deg, #fecc8f 10%, #ffedfe 90%);
   border-radius: 6px;
   text-decoration: none;
   outline: none;

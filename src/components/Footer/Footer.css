@@ -1,6 +1,10 @@
 
 footer {
     background-image: url("src/assets/background7.jpg");
+    width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  margin-top: auto;
 }
 
 .navbar__items {

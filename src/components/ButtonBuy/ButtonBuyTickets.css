@@ -1,0 +1,19 @@
+.buy_tickets_button {
+    color: #000;
+    text-decoration: none;
+    background-color: #fdc6c6;
+    width: 35vh;
+    height: 4vh;
+    display: flex;
+    margin-top: 1.5em;
+    border-radius: 10px;
+  }
+
+  
+  .buy_tickets_button a {
+    text-decoration: none;
+  }
+  
+  .buy_tickets_button:active a {
+    color: inherit;
+  }
