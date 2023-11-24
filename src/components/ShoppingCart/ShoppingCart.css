@@ -87,8 +87,19 @@ button:focus,
   color: #fff;
 }
 
+
+.eventImage {
+ position: relative;
+ display: flex;
+ height: 10em;
+ max-width: 8em;
+ border-radius: 10px;
+ overflow: hidden;
+ margin: 0.8rem;
+}
+
 .Event {
-  height: 8em;
+  object-fit: cover;
 }
 
 .ShoppingCartTrigger {
@@ -162,7 +173,7 @@ button:focus,
 }
 @media only screen and (min-width: 600px) {
   .itemList.one {
-    width: 500px;
+    width: 750px;
     grid-template-columns: 0.75fr 1fr;
   }
 

@@ -10,6 +10,7 @@ import Event from "../../assets/event.png";
 import Bin from "../../assets/bin.png"
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { ScrollArea, Box, Heading, Flex, Text } from "@radix-ui/themes";
 
 
 
@@ -48,16 +49,20 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
 
 
   return (
-    <NavigationMenu.Item>
+    
+      <NavigationMenu.Item>
+        
       {/* CART */}
+
       <NavigationMenu.Trigger className="ShoppingCartTrigger" onPointerEnter={handleMenuToggle} onPointerLeave={handleMenuToggle}>
         <img className="Social" src={Cart} alt="" />
       </NavigationMenu.Trigger>
       <NavigationMenu.Content className="ShoppingCartContent" onPointerEnter={() => setMenuOpen(true)} onPointerLeave={() => setMenuOpen(false)}>
+      <ScrollArea type="always" scrollbars="vertical" style={{ height: 1000 }}>
         <div className="Title">Shopping cart</div>
         <div className="fila1">
-          <h3>EVENT</h3>
-          <h3>SUBTOTAL</h3>
+          <h3 className="ShoppingCartCalloutHeading">EVENT</h3>
+          <h3 className="ShoppingCartCalloutHeading">SUBTOTAL</h3>
         </div>
         {cartItems.map((item) => (
         <ul className="itemList one" key={item._id}>
@@ -66,7 +71,9 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
               <Link className="ShoppingCartCallout" to="/">
                 <div className="ItemsContainer">
                   <div className="producto">
+                    <div className="eventImage">
                     <img src={item.image} className="Event" alt={item.name} />
+                    </div>
                     <div className="EventAndCounter">
                       <div className="ShoppingCartCalloutHeading">
                         {item.name}
@@ -116,8 +123,12 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
           </li>
         </ul>
       ))}
+      </ScrollArea>
       </NavigationMenu.Content>
+      
     </NavigationMenu.Item>
+    
+    
   );
 };
 
