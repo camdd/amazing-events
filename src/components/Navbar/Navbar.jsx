@@ -13,6 +13,13 @@ import User from "../../assets/user.png";
 import ShoppingCart from "../ShoppingCart";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuOpen((prevMenuOpen) => !prevMenuOpen);
+  };
+
+
   return (
     <NavigationMenu.Root className="NavigationMenuRoot" role="navbarElement">
       <Link className="logos" to="/">
@@ -76,7 +83,7 @@ const Navbar = () => {
           </Link>
         </NavigationMenu.Item>
 
-        <ShoppingCart/>
+        <ShoppingCart menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
 
         <NavigationMenu.Item>
           {/* USER */}

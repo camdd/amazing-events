@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/display-name */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
@@ -8,14 +9,31 @@ import Cart from "../../assets/cart.png";
 import Event from "../../assets/event.png";
 import Bin from "../../assets/bin.png"
 
-const ShoppingCart = () => {
+const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
+
+  const handleMenuToggle = () => {
+    setMenuOpen((prevMenuOpen) => !prevMenuOpen);
+  };
+
+  const handleQtyPlusClick = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+  };
+
+  const handleQtyMinusClick = (event) => {
+    event.stopPropagation(); 
+    event.preventDefault();
+  };
+
+
+
   return (
     <NavigationMenu.Item>
       {/* CART */}
-      <NavigationMenu.Trigger className="ShoppingCartTrigger">
+      <NavigationMenu.Trigger className="ShoppingCartTrigger" onPointerEnter={handleMenuToggle} onPointerLeave={handleMenuToggle}>
         <img className="Social" src={Cart} alt="" />
       </NavigationMenu.Trigger>
-      <NavigationMenu.Content className="ShoppingCartContent">
+      <NavigationMenu.Content className="ShoppingCartContent" onPointerEnter={() => setMenuOpen(true)} onPointerLeave={() => setMenuOpen(false)}>
         <div className="Title">Shopping cart</div>
         <div className="fila1">
           <h3>EVENT</h3>
@@ -40,6 +58,7 @@ const ShoppingCart = () => {
                           className="cart-qty-plus"
                           type="button"
                           value="+"
+                          onClick={handleQtyPlusClick}
                         >
                           -
                         </button>
@@ -54,6 +73,7 @@ const ShoppingCart = () => {
                           className="cart-qty-minus"
                           type="button"
                           value="-"
+                          onClick={handleQtyMinusClick}
                         >
                           +
                         </button>
