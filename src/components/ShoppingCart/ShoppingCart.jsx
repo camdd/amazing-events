@@ -8,22 +8,38 @@ import { Link } from "react-router-dom";
 import Cart from "../../assets/cart.png";
 import Event from "../../assets/event.png";
 import Bin from "../../assets/bin.png"
+import { useState, useEffect } from "react";
+
 
 const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
+  const [quantity, setQuantity] = useState(0);
+  const pricePerItem = 10; 
+
+  const handleIncrement = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const calculateTotal = () => {
+    return quantity * pricePerItem;
+  };
+
+
 
   const handleMenuToggle = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
-  const handleQtyPlusClick = (event) => {
-    event.stopPropagation();
-    event.preventDefault();
-  };
 
-  const handleQtyMinusClick = (event) => {
-    event.stopPropagation(); 
-    event.preventDefault();
-  };
 
 
 
@@ -51,14 +67,15 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
                         Event name
                       </div>
                       <div className="eventPrice ShoppingCartCalloutHeading">
-                      <input type="text" value="125" className="price form-control " disabled />
+                      <input type="text" value="10" className="price form-control " disabled />
                       </div>
-                      <div className="button-container">
+                      <div className="button-container"
+                      onClick={(e) => e.stopPropagation()}>
                         <button
                           className="cart-qty-plus"
                           type="button"
                           value="+"
-                          onClick={handleQtyPlusClick}
+                          onClick={handleDecrement}
                         >
                           -
                         </button>
@@ -67,13 +84,14 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
                           name="qty"
                           min="0"
                           className="qty inputQuantity"
-                          value="0"
+                          value={quantity}
+          readOnly
                         />
                         <button
                           className="cart-qty-minus"
                           type="button"
                           value="-"
-                          onClick={handleQtyMinusClick}
+                          onClick={handleIncrement}
                         >
                           +
                         </button>
@@ -81,7 +99,7 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
                     </div>
                   </div>
                   <div className="subtotal">
-                    <p className="ShoppingCartCalloutHeading">$10</p>
+                  <div className="ShoppingCartCalloutHeading">${calculateTotal()}</div>
                     <img className="Bin" src={Bin} alt="" />
                   </div>
                 </div>
