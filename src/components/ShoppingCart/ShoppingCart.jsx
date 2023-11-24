@@ -5,36 +5,73 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import "./ShoppingCart.css";
 import { Link } from "react-router-dom";
 import Cart from "../../assets/cart.png";
-import Event from "../../assets/event.png"
+import Event from "../../assets/event.png";
+import Bin from "../../assets/bin.png"
 
 const ShoppingCart = () => {
   return (
-        <NavigationMenu.Item>
-          {/* CART */}
-          <NavigationMenu.Trigger className="NavigationMenuTrigger">
-              <img className="social" src={Cart} alt="" />
-          </NavigationMenu.Trigger>
-          <NavigationMenu.Content className="NavigationMenuContent">
-            <ul className="List one">
-              <h3>Shopping cart</h3>
-              <br />
-              <li /* style={{ gridRow: "span 3" }} */>
-                <NavigationMenu.Link asChild>
-                  <Link className="Callout" to="/">
-                    <img src={Event} className="calendar" />
-                    <div className="CalloutHeading">AMAZING EVENTS</div>
-                    <p className="CalloutText">
-                      Explore the top events in your city
-                    </p>
-                  </Link>
-                </NavigationMenu.Link>
-              </li>
-            </ul>
-          </NavigationMenu.Content>
-        </NavigationMenu.Item>
-
+    <NavigationMenu.Item>
+      {/* CART */}
+      <NavigationMenu.Trigger className="ShoppingCartTrigger">
+        <img className="Social" src={Cart} alt="" />
+      </NavigationMenu.Trigger>
+      <NavigationMenu.Content className="ShoppingCartContent">
+        <div className="Title">Shopping cart</div>
+        <div className="fila1">
+          <h3>EVENT</h3>
+          <h3>SUBTOTAL</h3>
+        </div>
+        <ul className="itemList one">
+          <li className="item">
+            <NavigationMenu.Link asChild>
+              <Link className="ShoppingCartCallout" to="/">
+                <div className="ItemsContainer">
+                  <div className="producto">
+                    <img src={Event} className="Event" />
+                    <div className="EventAndCounter">
+                      <div className="ShoppingCartCalloutHeading">
+                        Event name
+                      </div>
+                      <div className="eventPrice ShoppingCartCalloutHeading">
+                      <input type="text" value="125" className="price form-control " disabled />
+                      </div>
+                      <div className="button-container">
+                        <button
+                          className="cart-qty-plus"
+                          type="button"
+                          value="+"
+                        >
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          name="qty"
+                          min="0"
+                          className="qty inputQuantity"
+                          value="0"
+                        />
+                        <button
+                          className="cart-qty-minus"
+                          type="button"
+                          value="-"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="subtotal">
+                    <p className="ShoppingCartCalloutHeading">$10</p>
+                    <img className="Bin" src={Bin} alt="" />
+                  </div>
+                </div>
+              </Link>
+            </NavigationMenu.Link>
+          </li>
+        </ul>
+      </NavigationMenu.Content>
+    </NavigationMenu.Item>
   );
 };
-
 
 export default ShoppingCart;
