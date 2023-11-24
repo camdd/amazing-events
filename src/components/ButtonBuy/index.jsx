@@ -1,17 +1,20 @@
+/* eslint-disable react/prop-types */
 import { Button } from "@radix-ui/themes";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import eventosActions from "../../store/actions/eventosActions"
 import './ButtonBuyTickets.css';
 
-const ButtonBuyTickets = () => {
-    return(
-        <>
+const ButtonBuyTickets = ({evento}) => {
+  const dispatch = useDispatch();
 
-        <Button className="buy_tickets_button" role="buttonElement">
-              <Link className="go_back" to="/">
-                Buy Tickets
-              </Link>
-            </Button>
-        </>
+  const handleBuyTickets = () => {
+    dispatch(eventosActions.addToCart(evento));
+  };
+
+    return(
+    <Button className="buy_tickets_button" onClick={handleBuyTickets}>
+      Buy Tickets
+    </Button>
     )
 }
 

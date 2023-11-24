@@ -1,15 +1,16 @@
-import {createReducer} from '@reduxjs/toolkit'
-import eventosActions from '../actions/eventosActions'
+import { createReducer } from '@reduxjs/toolkit';
+import eventosActions from '../actions/eventosActions';
 
-const initialSate = []
+const initialState = [];
 
-const eventosReducer = createReducer(initialSate, (builder)=> {
-    return builder
+const eventosReducer = createReducer(initialState, (builder) => {
+  builder
     .addCase(eventosActions.get_eventos.fulfilled, (state, action) => {
-
-        let newState = action.payload   
-        return newState
+      return action.payload;
     })
-})
+    .addCase("ADD_TO_CART", (state, action) => {
+      return [...state, action.payload];
+    });
+});
 
-export default eventosReducer
+export default eventosReducer;

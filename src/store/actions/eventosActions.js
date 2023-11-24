@@ -20,6 +20,13 @@ const get_eventos = createAsyncThunk("get_eventos", async () => {
     }
 })
 
-const eventosActions = {get_eventos}
+const addToCart = (event) => {
+    return {
+      type: "ADD_TO_CART",
+      payload: event,
+    };
+  };
+
+const eventosActions = {get_eventos, addToCart}
 
 export default eventosActions

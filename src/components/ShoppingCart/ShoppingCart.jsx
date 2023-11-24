@@ -9,9 +9,13 @@ import Cart from "../../assets/cart.png";
 import Event from "../../assets/event.png";
 import Bin from "../../assets/bin.png"
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+
 
 
 const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
+  const cartItems = useSelector((state) => state.eventos); // Ajusta el selector según la estructura de tu estado de Redux
+  // Asegúrate de que eventos.cart o la estructura correcta del estado de eventos sea utilizada para obtener los items del carrito
   const [quantity, setQuantity] = useState(0);
   const pricePerItem = 10; 
 
@@ -55,19 +59,21 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
           <h3>EVENT</h3>
           <h3>SUBTOTAL</h3>
         </div>
-        <ul className="itemList one">
+        {cartItems.map((item) => (
+        <ul className="itemList one" key={item._id}>
           <li className="item">
             <NavigationMenu.Link asChild>
               <Link className="ShoppingCartCallout" to="/">
                 <div className="ItemsContainer">
                   <div className="producto">
-                    <img src={Event} className="Event" />
+                    <img src={item.image} className="Event" alt={item.name} />
                     <div className="EventAndCounter">
                       <div className="ShoppingCartCalloutHeading">
-                        Event name
+                        {item.name}
                       </div>
                       <div className="eventPrice ShoppingCartCalloutHeading">
-                      <input type="text" value="10" className="price form-control " disabled />
+                        {/* Mostrar el precio del evento */}
+                        <input type="text" value={item.price} className="price form-control" disabled />
                       </div>
                       <div className="button-container"
                       onClick={(e) => e.stopPropagation()}>
@@ -96,10 +102,12 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
                           +
                         </button>
                       </div>
+                      {/* ... Resto de la información del evento ... */}
                     </div>
                   </div>
                   <div className="subtotal">
-                  <div className="ShoppingCartCalloutHeading">${calculateTotal()}</div>
+                    {/* Mostrar el subtotal del evento */}
+                    <div className="ShoppingCartCalloutHeading">${item.price}</div>
                     <img className="Bin" src={Bin} alt="" />
                   </div>
                 </div>
@@ -107,6 +115,7 @@ const ShoppingCart = ({ menuOpen, setMenuOpen }) => {
             </NavigationMenu.Link>
           </li>
         </ul>
+      ))}
       </NavigationMenu.Content>
     </NavigationMenu.Item>
   );
